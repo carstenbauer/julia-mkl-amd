@@ -52,6 +52,7 @@ end
 # main
 t_start = time_ns()
 cpu_name = first(Sys.cpu_info()).model
+println("HOSTNAME = ", gethostname())
 println("CPU = ", cpu_name)
 println("BLAS = ", getblas())
 println("BLAS.get_num_threads() = ", BLAS.get_num_threads())
@@ -63,5 +64,5 @@ println("BLAS.get_num_threads() = ", BLAS.get_num_threads())
 dfmkl = run_benchsuite()
 df = vcat(dfopenblas, dfmkl)
 CSV.write("results_$PINNING.csv", df)
-Δt = time_ns() - t_start
+Δt = (time_ns() - t_start) * 1e-9
 println("Done ($(floor(Int, Δt / 60)) minutes and $(round(Δt % 60; digits=1)) seconds elapsed)")
