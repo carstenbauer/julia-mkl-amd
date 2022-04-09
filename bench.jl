@@ -7,7 +7,8 @@ using CSV
 const NSAMPLES = 3
 const NEVALS = 1
 # const FUNCS_SIZES = Dict(svd => [1000, 5000, 10000], eigen => [1000, 5000, 10000], cholesky => [5000, 10000, 50000], Base.:* => [5000, 10000, 50000],)
-const FUNCS_SIZES = Dict(svd => [10, 50, 100], eigen => [10, 50, 100], cholesky => [50, 100, 500], Base.:* => [50, 100, 500],)
+const FUNCS_SIZES = Dict(svd => [1000], eigen => [1000], cholesky => [5000], Base.:* => [5000],)
+# const FUNCS_SIZES = Dict(svd => [10, 50, 100], eigen => [10, 50, 100], cholesky => [50, 100, 500], Base.:* => [50, 100, 500],)
 const PINNING = get(ARGS, 1, "unknown")
 
 rand_hermitian(s1, s2) = Matrix(Hermitian(rand(s1, s2)))

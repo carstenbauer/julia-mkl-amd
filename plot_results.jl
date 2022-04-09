@@ -9,6 +9,7 @@ replace!(dfai.f, "*" => "matmul")
 replace!(dfmb.f, "*" => "matmul")
 sort!(dfai, [:pinning, :BLAS, :f, :size])
 sort!(dfmb, [:pinning, :BLAS, :f, :size])
+nsizes = nrow(subset(dfai, :f => x -> x .== "svd", :BLAS => x -> x .== "OpenBLAS")) # assuming same number of sizes for all funcs
 
 blas2grp(str) = Int(str == "OpenBLAS") + 1
 group_labels = ["MKL", "OpenBLAS"]
@@ -22,6 +23,7 @@ for j in 1:ncols
     ax = Axis(f[1, j])
     df = dfai[dfai.f.==funcs[j], :]
     ax.title = first(df.f)
+    ax.xticks = unique(df.size)
     if j == 1
         ax.ylabel = "Min. runtime [s]"
     end
@@ -35,15 +37,16 @@ for j in 1:ncols
     ax = Axis(f[2, j])
     df = dfai[dfai.f.==funcs[j], :]
     ax.title = first(df.f)
+    ax.xticks = unique(df.size)
     if j == 1
         ax.ylabel = "Normalized to MKL"
     end
     grp = blas2grp.(df.BLAS)
-    @assert all(df.BLAS[1:3] .== "MKL")
-    @assert all(df.BLAS[4:6] .== "OpenBLAS")
-    mkltimes = df[1:3, :time]
-    openblastimes = df[4:6, :time]
-    barplot!(ax, df.size, vcat([1.0, 1.0, 1.0], openblastimes ./ mkltimes),
+    @assert all(df.BLAS[1:nsizes] .== "MKL")
+    @assert all(df.BLAS[nsizes+1:end] .== "OpenBLAS")
+    mkltimes = df[1:nsizes, :time]
+    openblastimes = df[nsizes+1:end, :time]
+    barplot!(ax, df.size, vcat(fill(1.0, nsizes), openblastimes ./ mkltimes),
         dodge=grp,
         color=colors[grp])
 end
@@ -56,6 +59,7 @@ for j in 1:ncols
     ax = Axis(f[5, j])
     df = dfmb[dfmb.f.==funcs[j], :]
     ax.title = first(df.f)
+    ax.xticks = unique(df.size)
     if j == 1
         ax.ylabel = "Min. runtime [s]"
     end
@@ -69,15 +73,16 @@ for j in 1:ncols
     ax = Axis(f[6, j])
     df = dfmb[dfmb.f.==funcs[j], :]
     ax.title = first(df.f)
+    ax.xticks = unique(df.size)
     if j == 1
         ax.ylabel = "Normalized to MKL"
     end
     grp = blas2grp.(df.BLAS)
-    @assert all(df.BLAS[1:3] .== "MKL")
-    @assert all(df.BLAS[4:6] .== "OpenBLAS")
-    mkltimes = df[1:3, :time]
-    openblastimes = df[4:6, :time]
-    barplot!(ax, df.size, vcat([1.0, 1.0, 1.0], openblastimes ./ mkltimes),
+    @assert all(df.BLAS[1:nsizes] .== "MKL")
+    @assert all(df.BLAS[nsizes+1:end] .== "OpenBLAS")
+    mkltimes = df[1:nsizes, :time]
+    openblastimes = df[nsizes+1:end, :time]
+    barplot!(ax, df.size, vcat(fill(1.0, nsizes), openblastimes ./ mkltimes),
         dodge=grp,
         color=colors[grp])
 end
