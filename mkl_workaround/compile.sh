@@ -1,0 +1,1 @@
+gcc -shared -fPIC -o libfakeintel.so fakeintel.c

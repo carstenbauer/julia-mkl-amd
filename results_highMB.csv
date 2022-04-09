@@ -1,9 +1,0 @@
-f,size,time,BLAS,pinning
-cholesky,5000,0.147761095,OpenBLAS,highMB
-*,5000,0.319445061,OpenBLAS,highMB
-eigen,1000,0.905482696,OpenBLAS,highMB
-svd,1000,0.269173596,OpenBLAS,highMB
-cholesky,5000,0.146102763,MKL,highMB
-*,5000,0.164658525,MKL,highMB
-eigen,1000,0.642978486,MKL,highMB
-svd,1000,0.122688139,MKL,highMB
