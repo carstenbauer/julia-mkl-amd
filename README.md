@@ -1,6 +1,6 @@
 # julia-mkl-amd
 
-Intel MKL vs OpenBLAS on [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2) (2x AMD EPYC 7763 64-Core CPU) in Julia.
+Intel MKL vs OpenBLAS on [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2) (AMD EPYC 7763 64-Core CPU) in Julia.
 
 ## Acknowledgements
 
