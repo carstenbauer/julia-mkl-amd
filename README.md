@@ -1,12 +1,15 @@
 # julia-mkl-amd
 
-Intel MKL vs OpenBLAS in Julia on [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2) with .
+Intel MKL vs OpenBLAS in Julia on HPC clusters at the [Paderborn Center for Parallel Computing (PC2)](https://pc2.uni-paderborn.de/):
+* [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2) (single and dual-socket AMD EPYC Milan 7763 64-Core CPUs)
+* [DGX-A100 @ Noctua 1](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua1) (dual-socket AMD EPYC Rome 7742 64-Core CPUs)
 
 **Remarks:**
-* "MKL faked" uses the `LD_PRELOAD` described [here](https://danieldk.eu/Posts/2020-08-31-MKL-Zen.html).
-* Used MKL: [MKL_jll](https://github.com/JuliaBinaryWrappers/MKL_jll.jl) `v2022.0.0+0`.
-* The tests have been run with Julia version 1.8.0-beta3 since in 1.7 (current stable version) the maximal number of OpenBLAS threads is fixed to 32 and our nodes have more cores available.
-* We used an (exclusive) login node of Noctua 2 to run the test since hyperthreading is disabled on the compute nodes.
+* "MKL faked" tries to implement the `LD_PRELOAD` workaround described [here](https://danieldk.eu/Posts/2020-08-31-MKL-Zen.html).
+
+**Versions:**
+* Julia version 1.8.0-beta3 since the maximal number of OpenBLAS threads is fixed to 32 in 1.7 (current stable version).
+* [MKL_jll](https://github.com/JuliaBinaryWrappers/MKL_jll.jl) `v2022.0.0+0`.
 
 ## Acknowledgements
 
