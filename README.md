@@ -10,7 +10,7 @@ Intel MKL vs OpenBLAS in Julia on [Noctua 2](https://pc2.uni-paderborn.de/hpc-se
 
 ## Results
 
-### Noctua 2
+### [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2)
 
 #### Login node
 
@@ -24,11 +24,11 @@ Two **AMD EPYC 7763 64-Core CPUs** with hyperthreading **disabled**.
 
 TODO
 
-### Noctua 1
+### [Noctua 1](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua1)
 
 #### DGX-A100
 
-Two **AMD EPYC 7763 64-Core CPUs** with hyperthreading **disabled**.
+Two **AMD EPYC 7742 64-Core CPUs** with hyperthreading **disabled**.
 
 ##### Using only single CPU
 
