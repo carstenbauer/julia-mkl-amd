@@ -67,6 +67,7 @@ if contains(uppercase(BLASSTR),"MKL")
 end
 println("BLAS = ", getblas())
 println("BLAS.get_num_threads() = ", BLAS.get_num_threads())
+println("PINNING = ", PINNING)
 df = run_benchsuite()
 if isfile("results.csv") # concat if there are already results
     dfprev = DataFrame(CSV.File("results.csv"))

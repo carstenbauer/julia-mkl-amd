@@ -1,0 +1,127 @@
+cpu-bind=MASK - dgx-01, task  0  0 [3884635]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 64
+PINNING = highAI
+Min. runtime: 0.256169876s (cholesky, 5000)
+Min. runtime: 1.381567723s (cholesky, 10000)
+Min. runtime: 59.133293665s (cholesky, 50000)
+Min. runtime: 0.463119711s (*, 5000)
+Min. runtime: 1.442209782s (*, 10000)
+Min. runtime: 136.271387645s (*, 50000)
+Min. runtime: 1.112352126s (eigen, 1000)
+Min. runtime: 39.493300908s (eigen, 5000)
+Min. runtime: 275.473249263s (eigen, 10000)
+Min. runtime: 0.346944436s (svd, 1000)
+Min. runtime: 31.814955063s (svd, 5000)
+Min. runtime: 172.416763527s (svd, 10000)
+Done (28 minutes and 22.8 seconds elapsed)
+
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 64
+PINNING = highMB
+Min. runtime: 0.237714684s (cholesky, 5000)
+Min. runtime: 1.305557123s (cholesky, 10000)
+Min. runtime: 56.162413573s (cholesky, 50000)
+Min. runtime: 0.472082447s (*, 5000)
+Min. runtime: 1.494176221s (*, 10000)
+Min. runtime: 137.453948525s (*, 50000)
+Min. runtime: 1.121726378s (eigen, 1000)
+Min. runtime: 35.458625557s (eigen, 5000)
+Min. runtime: 247.985766039s (eigen, 10000)
+Min. runtime: 0.357353981s (svd, 1000)
+Min. runtime: 24.357887588s (svd, 5000)
+Min. runtime: 223.170048067s (svd, 10000)
+Done (27 minutes and 58.2 seconds elapsed)
+
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 64
+PINNING = highAI
+Min. runtime: 0.258921992s (cholesky, 5000)
+Min. runtime: 1.145833168s (cholesky, 10000)
+Min. runtime: 85.189082277s (cholesky, 50000)
+Min. runtime: 0.210804988s (*, 5000)
+Min. runtime: 1.38572835s (*, 10000)
+Min. runtime: 138.404135294s (*, 50000)
+Min. runtime: 0.80446784s (eigen, 1000)
+Min. runtime: 43.318580171s (eigen, 5000)
+Min. runtime: 255.254840272s (eigen, 10000)
+Min. runtime: 0.16511252s (svd, 1000)
+Min. runtime: 6.585232567s (svd, 5000)
+Min. runtime: 103.627785365s (svd, 10000)
+Done (23 minutes and 1.6 seconds elapsed)
+
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 64
+PINNING = highMB
+Min. runtime: 0.234762962s (cholesky, 5000)
+Min. runtime: 1.165535395s (cholesky, 10000)
+Min. runtime: 80.034967206s (cholesky, 50000)
+Min. runtime: 0.207753413s (*, 5000)
+Min. runtime: 1.379248863s (*, 10000)
+Min. runtime: 139.862255313s (*, 50000)
+Min. runtime: 0.794758797s (eigen, 1000)
+Min. runtime: 43.533956908s (eigen, 5000)
+Min. runtime: 256.059467066s (eigen, 10000)
+Min. runtime: 0.168726402s (svd, 1000)
+Min. runtime: 6.634562715s (svd, 5000)
+Min. runtime: 65.845772174s (svd, 10000)
+Done (22 minutes and 51.1 seconds elapsed)
+
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 64
+PINNING = highAI
+Min. runtime: 0.230287641s (cholesky, 5000)
+Min. runtime: 1.186369844s (cholesky, 10000)
+Min. runtime: 80.880315709s (cholesky, 50000)
+Min. runtime: 0.209818385s (*, 5000)
+Min. runtime: 1.38669465s (*, 10000)
+Min. runtime: 140.601807192s (*, 50000)
+Min. runtime: 0.799109829s (eigen, 1000)
+Min. runtime: 46.317231343s (eigen, 5000)
+Min. runtime: 272.171164088s (eigen, 10000)
+Min. runtime: 0.166191469s (svd, 1000)
+Min. runtime: 6.773927835s (svd, 5000)
+Min. runtime: 93.19771459s (svd, 10000)
+Done (23 minutes and 43.1 seconds elapsed)
+
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 64
+PINNING = highMB
+Min. runtime: 0.23916257s (cholesky, 5000)
+Min. runtime: 1.163166745s (cholesky, 10000)
+Min. runtime: 81.836776444s (cholesky, 50000)
+Min. runtime: 0.215013991s (*, 5000)
+Min. runtime: 1.383303003s (*, 10000)
+Min. runtime: 141.334387947s (*, 50000)
+Min. runtime: 0.80310174s (eigen, 1000)
+Min. runtime: 45.310784343s (eigen, 5000)
+Min. runtime: 289.517536292s (eigen, 10000)
+Min. runtime: 0.162445737s (svd, 1000)
+Min. runtime: 6.680050258s (svd, 5000)
+Min. runtime: 137.360639167s (svd, 10000)
+Done (25 minutes and 29.8 seconds elapsed)

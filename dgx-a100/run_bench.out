@@ -1,0 +1,134 @@
+cpu-bind=MASK - dgx-01, task  0  0 [162998]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+cpu-bind=MASK - dgx-01, task  0  0 [163020]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 128
+PINNING = highAI
+Min. runtime: 0.391017143s (cholesky, 5000)
+Min. runtime: 2.334128536s (cholesky, 10000)
+Min. runtime: 81.66044885s (cholesky, 50000)
+Min. runtime: 0.809384026s (*, 5000)
+Min. runtime: 2.581739477s (*, 10000)
+Min. runtime: 114.499413655s (*, 50000)
+Min. runtime: 2.44663877s (eigen, 1000)
+Min. runtime: 61.726358053s (eigen, 5000)
+Min. runtime: 446.830246072s (eigen, 10000)
+Min. runtime: 0.739184753s (svd, 1000)
+Min. runtime: 48.757725781s (svd, 5000)
+Min. runtime: 537.664710591s (svd, 10000)
+Done (48 minutes and 1.2 seconds elapsed)
+
+cpu-bind=MASK - dgx-01, task  0  0 [296065]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 128
+PINNING = highMB
+Min. runtime: 0.379351793s (cholesky, 5000)
+Min. runtime: 2.374701771s (cholesky, 10000)
+Min. runtime: 72.315131607s (cholesky, 50000)
+Min. runtime: 0.824859541s (*, 5000)
+Min. runtime: 2.226951253s (*, 10000)
+Min. runtime: 109.617472383s (*, 50000)
+Min. runtime: 1.956087402s (eigen, 1000)
+Min. runtime: 61.975601831s (eigen, 5000)
+Min. runtime: 463.783012134s (eigen, 10000)
+Min. runtime: 0.760564418s (svd, 1000)
+Min. runtime: 42.9997616s (svd, 5000)
+Min. runtime: 434.9336897s (svd, 10000)
+Done (45 minutes and 19.0 seconds elapsed)
+
+cpu-bind=MASK - dgx-01, task  0  0 [424357]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 128
+PINNING = highAI
+Min. runtime: 0.381045798s (cholesky, 5000)
+Min. runtime: 1.859498945s (cholesky, 10000)
+Min. runtime: 72.73736112s (cholesky, 50000)
+Min. runtime: 0.40523408s (*, 5000)
+Min. runtime: 1.368373718s (*, 10000)
+Min. runtime: 103.299997641s (*, 50000)
+Min. runtime: 1.41475116s (eigen, 1000)
+Min. runtime: 75.163126865s (eigen, 5000)
+Min. runtime: 408.663988433s (eigen, 10000)
+Min. runtime: 0.640504936s (svd, 1000)
+Min. runtime: 17.296631202s (svd, 5000)
+Min. runtime: 126.792319102s (svd, 10000)
+Done (29 minutes and 12.0 seconds elapsed)
+
+cpu-bind=MASK - dgx-01, task  0  0 [509882]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 128
+PINNING = highMB
+Min. runtime: 0.414671373s (cholesky, 5000)
+Min. runtime: 2.04085106s (cholesky, 10000)
+Min. runtime: 78.516816016s (cholesky, 50000)
+Min. runtime: 0.390989504s (*, 5000)
+Min. runtime: 1.446339131s (*, 10000)
+Min. runtime: 85.91696383s (*, 50000)
+Min. runtime: 1.38962277s (eigen, 1000)
+Min. runtime: 84.696039138s (eigen, 5000)
+Min. runtime: 397.621321866s (eigen, 10000)
+Min. runtime: 0.387018103s (svd, 1000)
+Min. runtime: 16.875960677s (svd, 5000)
+Min. runtime: 109.067918296s (svd, 10000)
+Done (28 minutes and 30.1 seconds elapsed)
+
+cpu-bind=MASK - dgx-01, task  0  0 [597420]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 128
+PINNING = highAI
+Min. runtime: 0.392595101s (cholesky, 5000)
+Min. runtime: 1.84679001s (cholesky, 10000)
+Min. runtime: 76.427432885s (cholesky, 50000)
+Min. runtime: 0.369871524s (*, 5000)
+Min. runtime: 1.545700017s (*, 10000)
+Min. runtime: 82.892583062s (*, 50000)
+Min. runtime: 1.238554591s (eigen, 1000)
+Min. runtime: 75.34424409s (eigen, 5000)
+Min. runtime: 384.166182431s (eigen, 10000)
+Min. runtime: 0.345376441s (svd, 1000)
+Min. runtime: 17.448838558s (svd, 5000)
+Min. runtime: 118.45046237s (svd, 10000)
+Done (27 minutes and 48.0 seconds elapsed)
+
+cpu-bind=MASK - dgx-01, task  0  0 [679172]: mask 0xffffffffffffffffffffffffffffffff set
+using GPU devices 0,1,2,3,4,5,6,7
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = dgx-01
+CPU = AMD EPYC 7742 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 128
+PINNING = highMB
+Min. runtime: 0.429837008s (cholesky, 5000)
+Min. runtime: 1.98297026s (cholesky, 10000)
+Min. runtime: 62.809018711s (cholesky, 50000)
+Min. runtime: 0.364909197s (*, 5000)
+Min. runtime: 1.369953134s (*, 10000)
+Min. runtime: 99.936610004s (*, 50000)
+Min. runtime: 1.525672764s (eigen, 1000)
+Min. runtime: 70.138221873s (eigen, 5000)
+Min. runtime: 358.141766961s (eigen, 10000)
+Min. runtime: 0.342742994s (svd, 1000)
+Min. runtime: 15.879246611s (svd, 5000)
+Min. runtime: 135.882238005s (svd, 10000)
+Done (28 minutes and 30.0 seconds elapsed)
+
