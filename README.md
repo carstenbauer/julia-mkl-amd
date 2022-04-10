@@ -29,7 +29,13 @@ Single **AMD EPYC 7763 64-Core CPU** with hyperthreading **enabled**.
 
 Two **AMD EPYC 7763 64-Core CPUs** with hyperthreading **disabled**.
 
-TODO
+##### Using only single CPU
+
+<img src="https://github.com/carstenbauer/julia-mkl-amd/raw/master/n2cn-singleCPU/figure.png">
+
+##### Using both CPUs
+
+<img src="https://github.com/carstenbauer/julia-mkl-amd/raw/master/n2cn/figure.png">
 
 ### [Noctua 1](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua1)
 

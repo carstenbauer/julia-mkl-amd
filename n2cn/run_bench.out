@@ -1,0 +1,127 @@
+cpu-bind=MASK - n2cn0171, task  0  0 [14965]: mask 0xffffffffffffffffffffffffffffffff set
+cpu-bind=MASK - n2cn0171, task  0  0 [14993]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0171
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 128
+PINNING = highAI
+Min. runtime: 0.312618965s (cholesky, 5000)
+Min. runtime: 1.690533133s (cholesky, 10000)
+Min. runtime: 61.242789973s (cholesky, 50000)
+Min. runtime: 0.542934366s (*, 5000)
+Min. runtime: 1.577260363s (*, 10000)
+Min. runtime: 68.52270286s (*, 50000)
+Min. runtime: 1.540831924s (eigen, 1000)
+Min. runtime: 44.95069633s (eigen, 5000)
+Min. runtime: 383.408922282s (eigen, 10000)
+Min. runtime: 0.52401583s (svd, 1000)
+Min. runtime: 34.579953582s (svd, 5000)
+Min. runtime: 548.9988509s (svd, 10000)
+Done (39 minutes and 54.8 seconds elapsed)
+
+cpu-bind=MASK - n2cn0171, task  0  0 [15482]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0171
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 128
+PINNING = highMB
+Min. runtime: 0.321611946s (cholesky, 5000)
+Min. runtime: 1.780001028s (cholesky, 10000)
+Min. runtime: 61.06544724s (cholesky, 50000)
+Min. runtime: 0.523121442s (*, 5000)
+Min. runtime: 1.693219719s (*, 10000)
+Min. runtime: 118.603952231s (*, 50000)
+Min. runtime: 1.67833226s (eigen, 1000)
+Min. runtime: 44.74073022s (eigen, 5000)
+Min. runtime: 379.789067957s (eigen, 10000)
+Min. runtime: 0.563391145s (svd, 1000)
+Min. runtime: 34.036261406s (svd, 5000)
+Min. runtime: 541.597766042s (svd, 10000)
+Done (41 minutes and 22.5 seconds elapsed)
+
+cpu-bind=MASK - n2cn0171, task  0  0 [16309]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0171
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 128
+PINNING = highAI
+Min. runtime: 0.372101023s (cholesky, 5000)
+Min. runtime: 1.429721137s (cholesky, 10000)
+Min. runtime: 61.050961766s (cholesky, 50000)
+Min. runtime: 0.260803795s (*, 5000)
+Min. runtime: 1.285022766s (*, 10000)
+Min. runtime: 89.916405625s (*, 50000)
+Min. runtime: 0.836600294s (eigen, 1000)
+Min. runtime: 50.220390859s (eigen, 5000)
+Min. runtime: 278.174189334s (eigen, 10000)
+Min. runtime: 0.240423297s (svd, 1000)
+Min. runtime: 11.700277929s (svd, 5000)
+Min. runtime: 119.251622515s (svd, 10000)
+Done (22 minutes and 42.0 seconds elapsed)
+
+cpu-bind=MASK - n2cn0171, task  0  0 [16784]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0171
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 128
+PINNING = highMB
+Min. runtime: 0.350543548s (cholesky, 5000)
+Min. runtime: 1.415614922s (cholesky, 10000)
+Min. runtime: 61.228002733s (cholesky, 50000)
+Min. runtime: 0.230066012s (*, 5000)
+Min. runtime: 1.188027458s (*, 10000)
+Min. runtime: 87.813690389s (*, 50000)
+Min. runtime: 0.813808322s (eigen, 1000)
+Min. runtime: 51.736293808s (eigen, 5000)
+Min. runtime: 284.866626111s (eigen, 10000)
+Min. runtime: 0.225685275s (svd, 1000)
+Min. runtime: 13.08404487s (svd, 5000)
+Min. runtime: 116.736737626s (svd, 10000)
+Done (22 minutes and 44.0 seconds elapsed)
+
+cpu-bind=MASK - n2cn0171, task  0  0 [17278]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0171
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 128
+PINNING = highAI
+Min. runtime: 0.363119373s (cholesky, 5000)
+Min. runtime: 1.432012505s (cholesky, 10000)
+Min. runtime: 55.237187102s (cholesky, 50000)
+Min. runtime: 0.238575547s (*, 5000)
+Min. runtime: 1.222960779s (*, 10000)
+Min. runtime: 88.515188418s (*, 50000)
+Min. runtime: 0.842053384s (eigen, 1000)
+Min. runtime: 49.982561921s (eigen, 5000)
+Min. runtime: 275.910724696s (eigen, 10000)
+Min. runtime: 0.237040384s (svd, 1000)
+Min. runtime: 12.172363235s (svd, 5000)
+Min. runtime: 113.720094711s (svd, 10000)
+Done (22 minutes and 3.3 seconds elapsed)
+
+cpu-bind=MASK - n2cn0171, task  0  0 [17756]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0171
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 128
+PINNING = highMB
+Min. runtime: 0.35993421s (cholesky, 5000)
+Min. runtime: 1.443541228s (cholesky, 10000)
+Min. runtime: 60.091865816s (cholesky, 50000)
+Min. runtime: 0.243925368s (*, 5000)
+Min. runtime: 1.236446035s (*, 10000)
+Min. runtime: 81.428626064s (*, 50000)
+Min. runtime: 0.834664363s (eigen, 1000)
+Min. runtime: 53.471447157s (eigen, 5000)
+Min. runtime: 279.173504875s (eigen, 10000)
+Min. runtime: 0.2386639s (svd, 1000)
+Min. runtime: 12.521631322s (svd, 5000)
+Min. runtime: 124.179621378s (svd, 10000)
+Done (22 minutes and 22.6 seconds elapsed)
+

@@ -1,0 +1,121 @@
+cpu-bind=MASK - n2cn0169, task  0  0 [606611]: mask 0xffffffffffffffffffffffffffffffff set
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0169
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 64
+PINNING = highAI
+Min. runtime: 0.187957928s (cholesky, 5000)
+Min. runtime: 1.010175114s (cholesky, 10000)
+Min. runtime: 57.603582372s (cholesky, 50000)
+Min. runtime: 0.362924581s (*, 5000)
+Min. runtime: 1.247439102s (*, 10000)
+Min. runtime: 130.552911395s (*, 50000)
+Min. runtime: 0.839815822s (eigen, 1000)
+Min. runtime: 27.355716118s (eigen, 5000)
+Min. runtime: 235.610565792s (eigen, 10000)
+Min. runtime: 0.254924612s (svd, 1000)
+Min. runtime: 22.022836391s (svd, 5000)
+Min. runtime: 264.425561515s (svd, 10000)
+Done (26 minutes and 19.7 seconds elapsed)
+
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0169
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = OpenBLAS
+BLAS.get_num_threads() = 64
+PINNING = highMB
+Min. runtime: 0.186007091s (cholesky, 5000)
+Min. runtime: 0.99166527s (cholesky, 10000)
+Min. runtime: 58.871538828s (cholesky, 50000)
+Min. runtime: 0.369188299s (*, 5000)
+Min. runtime: 1.254451496s (*, 10000)
+Min. runtime: 129.651008642s (*, 50000)
+Min. runtime: 0.840911987s (eigen, 1000)
+Min. runtime: 27.152976778s (eigen, 5000)
+Min. runtime: 235.082827228s (eigen, 10000)
+Min. runtime: 0.257048099s (svd, 1000)
+Min. runtime: 22.514044125s (svd, 5000)
+Min. runtime: 263.537109073s (svd, 10000)
+Done (26 minutes and 35.8 seconds elapsed)
+
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0169
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 64
+PINNING = highAI
+Min. runtime: 0.18212064s (cholesky, 5000)
+Min. runtime: 0.841705375s (cholesky, 10000)
+Min. runtime: 59.896912567s (cholesky, 50000)
+Min. runtime: 0.160679059s (*, 5000)
+Min. runtime: 1.232832527s (*, 10000)
+Min. runtime: 191.6277516s (*, 50000)
+Min. runtime: 0.638572195s (eigen, 1000)
+Min. runtime: 31.932108448s (eigen, 5000)
+Min. runtime: 202.700987708s (eigen, 10000)
+Min. runtime: 0.122550868s (svd, 1000)
+Min. runtime: 4.357898968s (svd, 5000)
+Min. runtime: 106.000970816s (svd, 10000)
+Done (22 minutes and 0.3 seconds elapsed)
+
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0169
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL
+BLAS.get_num_threads() = 64
+PINNING = highMB
+Min. runtime: 0.189470701s (cholesky, 5000)
+Min. runtime: 0.876113964s (cholesky, 10000)
+Min. runtime: 59.255946812s (cholesky, 50000)
+Min. runtime: 0.162279852s (*, 5000)
+Min. runtime: 1.237560907s (*, 10000)
+Min. runtime: 191.147604947s (*, 50000)
+Min. runtime: 0.648560994s (eigen, 1000)
+Min. runtime: 32.336679159s (eigen, 5000)
+Min. runtime: 203.552154274s (eigen, 10000)
+Min. runtime: 0.122077474s (svd, 1000)
+Min. runtime: 4.398882201s (svd, 5000)
+Min. runtime: 106.711371364s (svd, 10000)
+Done (22 minutes and 1.4 seconds elapsed)
+
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0169
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 64
+PINNING = highAI
+Min. runtime: 0.186160142s (cholesky, 5000)
+Min. runtime: 0.870897407s (cholesky, 10000)
+Min. runtime: 59.582420115s (cholesky, 50000)
+Min. runtime: 0.16352301s (*, 5000)
+Min. runtime: 1.23686714s (*, 10000)
+Min. runtime: 190.481499499s (*, 50000)
+Min. runtime: 0.641157912s (eigen, 1000)
+Min. runtime: 31.927885746s (eigen, 5000)
+Min. runtime: 202.455038638s (eigen, 10000)
+Min. runtime: 0.121564529s (svd, 1000)
+Min. runtime: 4.33568079s (svd, 5000)
+Min. runtime: 106.115045262s (svd, 10000)
+Done (21 minutes and 56.3 seconds elapsed)
+
+JULIA VERSION = 1.8.0-beta3
+HOSTNAME = n2cn0169
+CPU = AMD EPYC 7763 64-Core Processor
+BLAS = MKL faked
+BLAS.get_num_threads() = 64
+PINNING = highMB
+Min. runtime: 0.192154962s (cholesky, 5000)
+Min. runtime: 0.888305173s (cholesky, 10000)
+Min. runtime: 59.05110033s (cholesky, 50000)
+Min. runtime: 0.161065774s (*, 5000)
+Min. runtime: 1.238797613s (*, 10000)
+Min. runtime: 191.281312001s (*, 50000)
+Min. runtime: 0.641179953s (eigen, 1000)
+Min. runtime: 31.715682377s (eigen, 5000)
+Min. runtime: 203.952178926s (eigen, 10000)
+Min. runtime: 0.122662232s (svd, 1000)
+Min. runtime: 4.347596642s (svd, 5000)
+Min. runtime: 106.588767172s (svd, 10000)
+Done (22 minutes and 0.6 seconds elapsed)
+
