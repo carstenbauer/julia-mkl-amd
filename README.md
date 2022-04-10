@@ -1,6 +1,6 @@
 # julia-mkl-amd
 
-Intel MKL vs OpenBLAS in Julia on HPC clusters at the [Paderborn Center for Parallel Computing (PC2)](https://pc2.uni-paderborn.de/):
+Naive Julia benchmark of Intel MKL vs OpenBLAS performance on AMD HPC clusters at the [Paderborn Center for Parallel Computing (PC2)](https://pc2.uni-paderborn.de/):
 * [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2) (single and dual-socket AMD EPYC Milan 7763 64-Core CPUs)
 * [DGX-A100 @ Noctua 1](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua1) (dual-socket AMD EPYC Rome 7742 64-Core CPUs)
 
