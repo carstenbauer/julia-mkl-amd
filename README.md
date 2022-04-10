@@ -19,12 +19,6 @@ Heavily inspired by a similar Python benchmark run at NERSC: https://docs.nersc.
 
 ### [Noctua 2](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua2)
 
-#### Login node
-
-Single **AMD EPYC 7763 64-Core CPU** with hyperthreading **enabled**.
-
-<img src="https://github.com/carstenbauer/julia-mkl-amd/raw/master/n2login3/figure.png">
-
 #### Compute node
 
 Two **AMD EPYC 7763 64-Core CPUs** with hyperthreading **disabled**.
@@ -36,6 +30,12 @@ Two **AMD EPYC 7763 64-Core CPUs** with hyperthreading **disabled**.
 ##### Using both CPUs
 
 <img src="https://github.com/carstenbauer/julia-mkl-amd/raw/master/n2cn/figure.png">
+
+#### Login node
+
+Single **AMD EPYC 7763 64-Core CPU** with hyperthreading **enabled**.
+
+<img src="https://github.com/carstenbauer/julia-mkl-amd/raw/master/n2login3/figure.png">
 
 ### [Noctua 1](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua1)
 
