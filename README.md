@@ -5,7 +5,7 @@ Naive Julia benchmark of Intel MKL vs OpenBLAS performance on AMD HPC clusters a
 * [DGX-A100 @ Noctua 1](https://pc2.uni-paderborn.de/hpc-services/available-systems/noctua1) (dual-socket AMD EPYC Rome 7742 64-Core CPUs)
 
 **Remarks:**
-* "MKL faked" tries to implement the `LD_PRELOAD` workaround described [here](https://danieldk.eu/Posts/2020-08-31-MKL-Zen.html).
+* "MKL faked" tries to implement the `LD_PRELOAD` workaround described [here](https://danieldk.eu/Posts/2020-08-31-MKL-Zen.html), although our understanding is that Intel disabled it and added AMD specific kernels (that have worse performance than the Intel ones).
 
 **Versions:**
 * Julia version 1.8.0-beta3 since the maximal number of OpenBLAS threads is fixed to 32 in 1.7 (current stable version).
