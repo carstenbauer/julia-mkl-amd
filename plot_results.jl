@@ -5,7 +5,8 @@ using CSV
 # load data
 df = DataFrame(CSV.File("results.csv"))
 replace!(df.f, "*" => "matmul")
-sort!(df, [:pinning, :BLAS, :f, :size])
+blasorder = Dict("MKL" => 1, "BLIS" => 2, "OpenBLAS" => 3)
+sort!(df, [:pinning, order(:BLAS, by=x -> blasorder[x]), :f, :size])
 nsizes = nrow(subset(df, :f => x -> x .== "svd", :BLAS => x -> x .== "OpenBLAS", :pinning => x -> x .== "highAI"))
 
 group_labels = unique(df.BLAS)
@@ -46,9 +47,9 @@ for j in 1:ncols
     ax.title = first(df.f)
     grp = blas2grp.(df.BLAS)
     mkltimes = df[grpranges[blas2grp("MKL")], :time]
-    mklfakedtimes = df[grpranges[blas2grp("MKL faked")], :time]
+    blistimes = df[grpranges[blas2grp("BLIS")], :time]
     openblastimes = df[grpranges[blas2grp("OpenBLAS")], :time]
-    barplot!(ax, repeat(1:ngrps, nsizes), vcat(fill(1.0, nsizes), mklfakedtimes ./ mkltimes, openblastimes ./ mkltimes),
+    barplot!(ax, repeat(1:ngrps, nsizes), vcat(fill(1.0, nsizes), blistimes ./ mkltimes, openblastimes ./ mkltimes),
         dodge=grp,
         color=colors[grp])
 end
@@ -82,9 +83,9 @@ for j in 1:ncols
     ax.title = first(df.f)
     grp = blas2grp.(df.BLAS)
     mkltimes = df[grpranges[blas2grp("MKL")], :time]
-    mklfakedtimes = df[grpranges[blas2grp("MKL faked")], :time]
+    blistimes = df[grpranges[blas2grp("BLIS")], :time]
     openblastimes = df[grpranges[blas2grp("OpenBLAS")], :time]
-    barplot!(ax, repeat(1:ngrps, nsizes), vcat(fill(1.0, nsizes), mklfakedtimes ./ mkltimes, openblastimes ./ mkltimes),
+    barplot!(ax, repeat(1:ngrps, nsizes), vcat(fill(1.0, nsizes), blistimes ./ mkltimes, openblastimes ./ mkltimes),
         dodge=grp,
         color=colors[grp])
 end

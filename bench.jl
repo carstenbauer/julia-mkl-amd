@@ -4,6 +4,7 @@ using Libdl
 using BenchmarkTools
 using DataFrames
 using CSV
+using blis_jll
 
 const NSAMPLES = 3
 const NEVALS = 1
@@ -17,7 +18,7 @@ rand_hermitian(s1, s2) = Matrix(Hermitian(rand(s1, s2)))
 rand_hermitian_posdef(s1, s2) = rand_hermitian(s1, s2) + max(s1, s2) * I(max(s1, s2))
 
 function getblas()
-    blaslib = basename(BLAS.get_config().loaded_libs[1].libname)
+    blaslib = basename(last(BLAS.get_config().loaded_libs).libname)
     if contains(blaslib, "openblas")
         return "OpenBLAS"
     elseif contains(blaslib, "mkl")
@@ -27,6 +28,8 @@ function getblas()
         else
             return "MKL"
         end
+    elseif contains(blaslib, "blis")
+        return "BLIS"
     else
         return blaslib
     end
@@ -56,17 +59,22 @@ function run_benchsuite()
     return df
 end
 
+blis_get_num_threads() = @ccall blis.bli_thread_get_num_threads()::Cint
+blis_set_num_threads(nthreads) = @ccall blis.bli_thread_set_num_threads(nthreads::Cint)::Cvoid
+
 # main
 t_start = time_ns()
 println("JULIA VERSION = ", VERSION)
 println("HOSTNAME = ", gethostname())
 cpu_name = first(Sys.cpu_info()).model
 println("CPU = ", cpu_name)
-if contains(uppercase(BLASSTR),"MKL")
+if contains(uppercase(BLASSTR), "MKL")
     using MKL
+elseif contains(uppercase(BLASSTR), "BLIS")
+    BLAS.lbt_forward(blis; clear=false)
 end
 println("BLAS = ", getblas())
-println("BLAS.get_num_threads() = ", BLAS.get_num_threads())
+println("BLAS.get_num_threads() = ", getblas() == "BLIS" ? blis_get_num_threads() : BLAS.get_num_threads())
 println("PINNING = ", PINNING)
 df = run_benchsuite()
 if isfile("results.csv") # concat if there are already results
